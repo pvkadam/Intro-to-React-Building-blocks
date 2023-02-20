@@ -1,9 +1,11 @@
 import './App.css';
+import Filters from './Filters';
 
 function App(props) {
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
+      {/* Input */}
       <form>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
@@ -21,23 +23,11 @@ function App(props) {
           Add
         </button>
       </form>
-      <div className="filters btn-group stack-exception">
-        <button type="button" className="btn toggle-btn" aria-pressed="true">
-          <span className="visually-hidden">Show </span>
-          <span>all</span>
-          <span className="visually-hidden"> tasks</span>
-        </button>
-        <button type="button" className="btn toggle-btn" aria-pressed="false">
-          <span className="visually-hidden">Show </span>
-          <span>Active</span>
-          <span className="visually-hidden"> tasks</span>
-        </button>
-        <button type="button" className="btn toggle-btn" aria-pressed="false">
-          <span className="visually-hidden">Show </span>
-          <span>Completed</span>
-          <span className="visually-hidden"> tasks</span>
-        </button>
-      </div>
+
+      {/* Filters for Challenge */}
+      <Filters disabled={true}/>
+
+      {/* List */}
       <h2 id="list-heading">3 tasks remaining</h2>
       <ul
         role="list"
