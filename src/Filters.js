@@ -1,6 +1,5 @@
 
 export default function Filters(props) {
-  console.log('props', props);
   const { disabled } = props;
 
   return (
