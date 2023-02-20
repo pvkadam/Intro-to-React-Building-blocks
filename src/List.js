@@ -1,6 +1,6 @@
 
 export default function List(props) {
-    const { listItems, addItems } = props;
+    const { listItems } = props;
 
     return (
       <>

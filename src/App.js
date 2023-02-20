@@ -5,7 +5,7 @@ import List from './List';
 import { useState } from 'react';
 
 function App(props) {
-  const [list, setList] = useState([{ label: 'Foo' }]);
+  const [list, setList] = useState([]);
 
   const addItem = (item) => {
     setList([...list, item]);
@@ -16,7 +16,7 @@ function App(props) {
       <h1>TodoMatic</h1>
       <Input addItem={addItem}/>
       <Filters disabled={true}/>
-      <List listItems={list} addItems={setList} />
+      <List listItems={list} />
     </div>
   );
 }
