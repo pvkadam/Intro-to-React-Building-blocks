@@ -11,8 +11,9 @@ export default function Input(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addItem({ label: value });
+    addItem(value);
   }
+  
   return(
     <form>
     <h2 className="label-wrapper">
