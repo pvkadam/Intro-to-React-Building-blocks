@@ -1,4 +1,5 @@
 import React from "react";
+import Button from './Button';
 
 export default function List(props) {
   return (
@@ -10,15 +11,13 @@ export default function List(props) {
             { props.name }
           </label>
         </div>
-        <div className="btn-group">
-          <button
-            type="button"
-            className="btn btn__danger"
-            onClick={() => props.deleteList(props.id)}
-          >
-            Delete <span className="visually-hidden">{props.name}</span>
-          </button>
-        </div>
+        <Button
+          handleClick={() => props.deleteList(props.id)}
+          classes="btn__danger"
+          type="button"
+        >
+          Delete
+        </Button>
       </div>
     </li>
   );

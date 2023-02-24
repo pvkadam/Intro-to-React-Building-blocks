@@ -1,10 +1,10 @@
 
 export default function Button(props) {
-    const { handleClick, classes } = props;
+    const { handleClick, classes, type } = props;
 
     return (
       <button
-        type="submit"
+        type={type ? type : 'submit'}
         className={`btn ${classes}`}
         onClick={handleClick}
       >
