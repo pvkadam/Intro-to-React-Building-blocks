@@ -18,17 +18,6 @@ function App() {
     setList(remainingList);
   }
   
-  const editList = (id, newName) => {
-    const editedListItem = list.map((listItem) => {
-      // if this task has the same ID as the edited task
-      if (id === listItem.id) {
-        return { ...listItem, name: newName };
-      }
-      return listItem;
-    });
-    setList(editedListItem);
-  }
-  
   const headingText = `${list.length} tasks remaining`;
 
   return (
@@ -47,7 +36,6 @@ function App() {
             name={listItem.name}
             key={listItem.id}
             deleteList={deleteList}
-            editList={editList}
         />))}
       </ul>
     </div>
