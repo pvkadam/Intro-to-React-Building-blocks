@@ -40,14 +40,9 @@ function App(props) {
               Eat
             </label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit
-            </button>
-            <button type="button" className="btn btn__danger">
-              Delete
-            </button>
-          </div>
+          <button type="button" className="btn btn__danger">
+            Delete
+          </button>
         </li>
         <li className="todo stack-small">
           <div className="c-cb">
@@ -56,14 +51,9 @@ function App(props) {
               Sleep
             </label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit
-            </button>
-            <button type="button" className="btn btn__danger">
-              Delete
-            </button>
-          </div>
+          <button type="button" className="btn btn__danger">
+            Delete
+          </button>
         </li>
         <li className="todo stack-small">
           <div className="c-cb">
@@ -72,14 +62,9 @@ function App(props) {
               Repeat
             </label>
           </div>
-          <div className="btn-group">
-            <button type="button" className="btn">
-              Edit
-            </button>
-            <button type="button" className="btn btn__danger">
-              Delete
-            </button>
-          </div>
+          <button type="button" className="btn btn__danger">
+            Delete
+          </button>
         </li>
       </ul>
     </div>
