@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from './Button';
 
 export default function Input(props) {
   const { addItem } = props;
@@ -30,13 +31,9 @@ export default function Input(props) {
       value={value}
       onChange={handleChange}
     />
-    <button
-      type="submit"
-      className="btn btn__primary btn__lg"
-      onClick={handleSubmit}
-    >
+    <Button handleClick={handleSubmit} classes='btn__primary btn__lg'>
       Add
-    </button>
+    </Button>
   </form>
   )
 }
