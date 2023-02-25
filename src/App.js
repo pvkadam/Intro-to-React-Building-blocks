@@ -25,19 +25,11 @@ function App() {
       <h1>TodoMatic</h1>
       <Input addItem={addItem}/>
       <Filters disabled={true}/>
-      <h2 id="list-heading">{headingText}</h2>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading">
-        {list.map((listItem) => (
-          <List
-            id={listItem.id}
-            name={listItem.name}
-            key={listItem.id}
-            deleteList={deleteList}
-        />))}
-      </ul>
+      <List
+        headingText={headingText}
+        listItems={list}
+        deleteList={deleteList}
+      />
     </div>
   );
 }
