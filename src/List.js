@@ -1,3 +1,4 @@
+import Button from './Button';
 
 export default function List(props) {
 	const { listItems, deleteList, headingText } = props;
@@ -17,9 +18,9 @@ export default function List(props) {
 								{listItem.name}
 							</label>
 						</div>
-						<button type="button" className="btn btn__danger" onClick={() => deleteList(listItem.id)}>
+						<Button handleClick={() => deleteList(listItem.id)} classes="btn__danger" type="button">
 							Delete
-						</button>
+						</Button>
 					</li>
 				))}
 			</ul>
