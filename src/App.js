@@ -1,6 +1,7 @@
 import './App.css';
 import Filters from './Filters';
 import Input from './Input';
+import List from './List';
 import { useState } from 'react';
 import { nanoid } from "nanoid";
 
@@ -11,6 +12,11 @@ function App(props) {
     const newListItem = { id: "todo-" + nanoid(), name: name };
     setList([...list, newListItem]);
     console.log('New List Items: ', [...list, newListItem]);
+  }
+  
+  const deleteList = (id) => {
+    const remainingList = list.filter((listItem) => id !== listItem.id);
+    setList(remainingList);
   }
 
   return (
@@ -23,45 +29,7 @@ function App(props) {
       <Filters disabled={true}/>
 
       {/* List */}
-      <h2 id="list-heading">3 tasks remaining</h2>
-      <ul
-        role="list"
-        className="todo-list stack-large stack-exception"
-        aria-labelledby="list-heading">
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-0" type="checkbox" defaultChecked={true} />
-            <label className="todo-label" htmlFor="todo-0">
-              Eat
-            </label>
-          </div>
-          <button type="button" className="btn btn__danger">
-            Delete
-          </button>
-        </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-1" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-1">
-              Sleep
-            </label>
-          </div>
-          <button type="button" className="btn btn__danger">
-            Delete
-          </button>
-        </li>
-        <li className="todo stack-small">
-          <div className="c-cb">
-            <input id="todo-2" type="checkbox" />
-            <label className="todo-label" htmlFor="todo-2">
-              Repeat
-            </label>
-          </div>
-          <button type="button" className="btn btn__danger">
-            Delete
-          </button>
-        </li>
-      </ul>
+      <List listItems={list} deleteList={deleteList}/>
     </div>
   );
 }
